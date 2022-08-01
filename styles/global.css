@@ -1,0 +1,26 @@
+:root {
+    --principal-green: #026962;
+    --background: #f3f4f1;
+}
+@font-face {
+    font-family: 'Noto-sans';
+    src: url('../public/fonts/noto-sans-v27-latin-500.woff') format('woff'),
+        url('../public/fonts/noto-sans-v27-latin-500.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto-sans', sans-serif;
+}
+body {
+    background: var(--background);
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
