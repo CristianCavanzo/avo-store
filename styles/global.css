@@ -17,10 +17,29 @@
     font-family: 'Noto-sans', sans-serif;
 }
 body {
-    background: var(--background);
+    background: #fff;
 }
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.d_grid {
+    display: grid;
+}
+.d_flex {
+    display: flex;
+}
+.justify-content-beetween {
+    justify-content: space-between;
+}
+.align-items-center {
+    align-items: center;
+}
+.center {
+    place-items: center;
+}
+.max_width {
+    max-width: 1200px;
+    margin: 0 auto;
 }
