@@ -5,7 +5,6 @@ const avo = async ({ query: { avo: avoQuery } }, res) => {
         const db = new Database();
         const avo = await db.getById(avoQuery);
 
-        console.log(avo);
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json({ avo });

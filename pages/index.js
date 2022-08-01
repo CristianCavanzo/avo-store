@@ -2,17 +2,18 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Main } from '@components/Generals/Main';
 import { Card } from '@components/Avos/Card';
+export const getServerSideProps = async () => {
+    const env = process.env.NODE_ENV;
+    const {
+        data: { avos: productList },
+    } = await axios({
+        method: 'get',
+        url: `https://avo-store-six.vercel.app/api/avo`,
+    });
+    return { props: { productList } };
+};
 
-const Index = () => {
-    const [productList, setProductList] = useState([]);
-    useEffect(() => {
-        axios({
-            method: 'get',
-            url: '/api/avo',
-        }).then(({ data: { avos } }) => {
-            setProductList(avos);
-        });
-    }, []);
+const Index = ({ productList }) => {
     return (
         <React.Fragment>
             <Main />

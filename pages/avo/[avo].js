@@ -9,7 +9,6 @@ const Avo = () => {
             method: 'get',
             url: '/api/avo/2zd33b8c',
         }).then(({ data: { avo } }) => {
-            console.log(avo);
             setAvo(avo);
         });
     }, []);
